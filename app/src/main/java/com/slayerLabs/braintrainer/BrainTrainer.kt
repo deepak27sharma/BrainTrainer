@@ -3,7 +3,7 @@ package com.slayerLabs.braintrainer
 import android.app.Application
 import android.content.Context
 import com.slayerLabs.braintrainer.alarm.AlarmReceiver
-import com.slayerLabs.braintrainer.query.DailyChallengeRepository
+import com.slayerLabs.braintrainer.query.DailyChallengeRepositoryImpl
 import com.slayerLabs.braintrainer.query.QueryController
 
 class BrainTrainer: Application() {
@@ -14,12 +14,12 @@ class BrainTrainer: Application() {
         super.onCreate()
 
         QueryController.initializeRequestQueue()
-        mDailyChallengeRepository = DailyChallengeRepository()
+        mDailyChallengeRepository = DailyChallengeRepositoryImpl()
         mAlarmReceiver = AlarmReceiver()
     }
     companion object {
         private var instance: BrainTrainer? = null
-        private var mDailyChallengeRepository: DailyChallengeRepository? = null
+        private var mDailyChallengeRepository: DailyChallengeRepositoryImpl? = null
         private var mAlarmReceiver: AlarmReceiver? = null
         fun getApplicationContext(): Context {
             return instance!!.applicationContext
@@ -27,7 +27,7 @@ class BrainTrainer: Application() {
         fun getAlarmReceiver(): AlarmReceiver {
             return mAlarmReceiver!!
         }
-        fun getDailyChallengeRepository(): DailyChallengeRepository {
+        fun getDailyChallengeRepository(): DailyChallengeRepositoryImpl {
             return mDailyChallengeRepository!!
         }
     }
