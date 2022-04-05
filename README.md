@@ -1,5 +1,9 @@
 # BrainTrainer
 Get Daily Challenge question link from Leetcode and add as an event in personal Calendar on Android.
+#Purpose
+1. Practice Kotlin.
+2. Use Android Jetpack with Kotlin.
+3. Apply Object oriented design principles.
 
 #TODO
 1. Refactor using Android app architecture guidelines and OOP.
