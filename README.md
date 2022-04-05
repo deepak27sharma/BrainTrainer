@@ -1,5 +1,6 @@
 # BrainTrainer
 Get Daily Challenge question link from Leetcode and add as an event in personal Calendar on Android.
+
 #Purpose
 1. Practice Kotlin.
 2. Use Android Jetpack with Kotlin.
